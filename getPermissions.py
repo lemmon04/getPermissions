@@ -3,13 +3,7 @@ global table_Set
 global group_Set
 global DomainUsers_rights
 global GIS_Team_rights
-global GIS_LRS_editor_rights
-global GIS_Location_Rheditor_rights
-global GIS_RWD_Rheditor_rights
-global GIS_RWS_Rheditor_rights
-global GIS_TRAFINFO_Rheditor_rights
-global GIS_TRAFSAFETY_Rheditor_rights
-global Admin_RCE_rights
+
 
 #########################################################################################
 sde_conn ="C:/test.sde"
@@ -19,13 +13,7 @@ fcList = arcpy.ListFeatureClasses()
 table_Set = set([])
 DomainUsers_rights = []
 GIS_Team_rights = []
-GIS_LRS_editor_rights = []
-GIS_Location_Rheditor_rights = []
-GIS_RWD_Rheditor_rights = []
-GIS_RWS_Rheditor_rights = []
-GIS_TRAFINFO_Rheditor_rights = []
-GIS_TRAFSAFETY_Rheditor_rights = []
-Admin_RCE_rights = []
+
 def GetPrivileges():
     cnxn = pyodbc.connect(
         r'DRIVER={ODBC Driver 13 for SQL Server}'
