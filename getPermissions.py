@@ -2,7 +2,7 @@ import arcpy, pyodbc, os, sys, glob, xlwt
 global table_Set
 global group_Set
 global DomainUsers_rights
-global GIS_Team_rights
+
 
 
 #########################################################################################
@@ -47,7 +47,7 @@ def GetPrivileges():
         i = i + 1
 
     for row in result:
-        if row[4] == "NYDOT\Domain Users":
+        if row[4] == "Domain Users":
             if row[5] in ("UPDATE", "INSERT", "DELETE"):
                 table_Set.add(row[2])
                 DomainUsers_rights.append("editor")
